@@ -1,0 +1,18 @@
+{
+  "name": "arc365-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hjdesigner/arc365-back.git",
+  "author": "Henrique Melanda <hjdesigner23@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6"
+  }
+}
