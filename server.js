@@ -1,4 +1,7 @@
-const connection = require('./src/infrastructure/connection')
+const { GraphQLServer } = require('graphql-yoga')
+const connection = require('./infrastructure/connection')
+const resolvers = require('./graphql/resolvers')
+const typeDefs = require('./graphql/schemas')
 
 connection.connect(erro => {
   if (erro) {
@@ -7,3 +10,10 @@ connection.connect(erro => {
 
   console.log('successful connection')
 })
+
+const server = new GraphQLServer({
+  resolvers,
+  typeDefs
+})
+
+server.start(() => console.log('API Arc 365 run'))
