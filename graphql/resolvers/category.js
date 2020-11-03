@@ -6,7 +6,8 @@ const resolvers = {
     categories: () => Category.list(),
   },
   Mutation: {
-    addCategory: (root, params) => Category.add(params)
+    addCategory: (root, params) => Category.add(params),
+    uploadCategory: (root, params) => Category.upload(params),
   }
 }
 

@@ -13,6 +13,11 @@ class Category {
       name_category,
     }))
   }
+  upload(newItem) {
+    const { id_category, name_category } = newItem
+    const sql = `UPDATE category SET name_category='${name_category}' WHERE id_category=${id_category};`
+    return executeQuery(sql).then(() => newItem)
+  }
 }
 
 module.exports = new Category

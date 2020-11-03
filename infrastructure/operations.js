@@ -11,6 +11,9 @@ class Operations {
   add(item) {
     return cruds[this._entidade].add(item)
   }
+  upload(newItem, id) {
+    return cruds[this._entidade].upload(newItem, id)
+  }
 }
 
 module.exports = Operations

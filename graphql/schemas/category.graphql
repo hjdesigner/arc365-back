@@ -5,6 +5,7 @@ type Category {
 
 type Mutation {
   addCategory(name_category: String!) : Category!
+  uploadCategory(id_category: ID!, name_category: String!) : Category!
 }
 
 type Query {
