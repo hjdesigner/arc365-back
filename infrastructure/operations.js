@@ -17,6 +17,9 @@ class Operations {
   delete(id) {
     return cruds[this._entidade].delete(id)
   }
+  searchById(id) {
+    return cruds[this._entidade].searchById(id)
+  }
 }
 
 module.exports = Operations

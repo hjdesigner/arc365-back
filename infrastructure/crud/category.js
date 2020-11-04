@@ -23,6 +23,11 @@ class Category {
     const sql = `DELETE FROM category WHERE id_category=${id_category}`
     return executeQuery(sql).then(() => id_category)
   }
+  searchById(item) {
+    const { id_category } = item
+    const sql = `SELECT * FROM category WHERE id_category=${id_category}`
+    return executeQuery(sql).then(data => data[0]);
+  }
 }
 
 module.exports = new Category

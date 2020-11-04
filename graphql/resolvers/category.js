@@ -4,6 +4,7 @@ const Category = new Operations('category')
 const resolvers = {
   Query: {
     categories: () => Category.list(),
+    category: (root, params) => Category.searchById(params)
   },
   Mutation: {
     addCategory: (root, params) => Category.add(params),
