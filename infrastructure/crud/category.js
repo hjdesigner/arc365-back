@@ -18,6 +18,11 @@ class Category {
     const sql = `UPDATE category SET name_category='${name_category}' WHERE id_category=${id_category};`
     return executeQuery(sql).then(() => newItem)
   }
+  delete(item) {
+    const { id_category } = item
+    const sql = `DELETE FROM category WHERE id_category=${id_category}`
+    return executeQuery(sql).then(() => id_category)
+  }
 }
 
 module.exports = new Category
