@@ -1,0 +1,8 @@
+type FirstInteraction {
+  id_first_interaction: ID!,
+  status_first_interaction: Int!
+}
+
+type Query {
+  first_interaction: [FirstInteraction]!
+}
