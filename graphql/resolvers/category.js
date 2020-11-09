@@ -8,7 +8,7 @@ const resolvers = {
   },
   Mutation: {
     addCategory: (root, params) => Category.add(params),
-    uploadCategory: (root, params) => Category.upload(params),
+    updateCategory: (root, params) => Category.update(params),
     deleteCategory: (root, params) => Category.delete(params),
   }
 }

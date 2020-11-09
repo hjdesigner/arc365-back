@@ -11,8 +11,8 @@ class Operations {
   add(item) {
     return cruds[this._entidade].add(item)
   }
-  upload(newItem, id) {
-    return cruds[this._entidade].upload(newItem, id)
+  update(newItem, id) {
+    return cruds[this._entidade].update(newItem, id)
   }
   delete(id) {
     return cruds[this._entidade].delete(id)

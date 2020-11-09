@@ -6,3 +6,7 @@ type FirstInteraction {
 type Query {
   first_interaction: [FirstInteraction]!
 }
+
+type Mutation {
+  updateStatusFirstInteraction(id_first_interaction: ID!, status_first_interaction: Int!) : FirstInteraction!
+}
