@@ -1,0 +1,18 @@
+type User {
+  id_user: ID!,
+  name_user: String!,
+  lastname_user: String!,
+  email_user: String!,
+  password_user: String!,
+  permission_user: Int!
+}
+
+type Mutation {
+  addUser(
+    name_user: String!,
+    lastname_user: String!,
+    email_user: String!,
+    password_user: String!,
+    permission_user: Int!,
+  ) : User!
+}
