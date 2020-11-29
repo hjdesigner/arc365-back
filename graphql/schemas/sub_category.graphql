@@ -1,0 +1,9 @@
+type SubCategory {
+  id_sub_category: ID!,
+  id_category:  Int!,
+  name_sub_category: String!
+}
+
+type Mutation {
+  addSubCategory(id_category: Int!, name_sub_category: String!) : SubCategory
+}

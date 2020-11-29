@@ -1,0 +1,5 @@
+CREATE TABLE `arc`.`sub_category` (
+  `id_sub_category` INT NOT NULL AUTO_INCREMENT,
+  `id_category` INT NOT NULL,
+  `name_sub_category` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_sub_category`));
