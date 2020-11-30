@@ -7,3 +7,7 @@ type SubCategory {
 type Mutation {
   addSubCategory(id_category: Int!, name_sub_category: String!) : SubCategory
 }
+
+type Query {
+  subCategories: [SubCategory!]!,
+}

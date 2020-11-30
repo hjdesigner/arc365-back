@@ -1,6 +1,10 @@
 const executeQuery = require('../database/queries')
 
 class SubCategory {
+  list() {
+    const sql = 'SELECT * FROM sub_category'
+    return executeQuery(sql).then(data => data)
+  }
   add(item) {
     const { id_category, name_sub_category} = item
     const sql = `INSERT INTO sub_category(id_category, name_sub_category) VALUES('${id_category}', '${name_sub_category}')`
