@@ -5,6 +5,21 @@ class Category {
     const sql = 'SELECT * FROM category'
     return executeQuery(sql).then(data => data)
   }
+  allList() {
+    const sql = 'SELECT * FROM category; SELECT * FROM sub_category';
+    return executeQuery(sql).then(data => {
+      const categories = data[0]
+      const subCategories = data[1]
+      
+      return categories.map(category => {
+        const sub = subCategories.filter(item => item.id_category === category.id_category)
+        return ({
+          ...category,
+          subCategory: sub
+        })
+      })
+    })
+  }
   add(item) {
     const { name_category } = item
     const sql = `INSERT INTO category(name_category) VALUES('${name_category}')`

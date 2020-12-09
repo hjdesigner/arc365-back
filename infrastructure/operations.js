@@ -8,6 +8,9 @@ class Operations {
   list() {
     return cruds[this._entidade].list()
   }
+  allList() {
+    return cruds[this._entidade].allList()
+  }
   add(item) {
     return cruds[this._entidade].add(item)
   }

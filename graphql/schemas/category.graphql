@@ -1,6 +1,7 @@
 type Category {
   id_category: ID!,
-  name_category: String!
+  name_category: String!,
+  subCategory: [SubCategory!]
 }
 
 type Mutation {
@@ -11,5 +12,6 @@ type Mutation {
 
 type Query {
   categories: [Category!]!,
+  allCategories: [Category!],
   category(id_category: ID!): Category!
 }
